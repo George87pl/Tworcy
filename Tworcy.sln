@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tworcy", "Tworcy\Tworcy.csproj", "{BDA702A9-3FC6-4029-83AC-1D5983CFA0A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tworcy", "Tworcy\Tworcy.csproj", "{BDA702A9-3FC6-4029-83AC-1D5983CFA0A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TworcyData", "TworcyData\TworcyData.csproj", "{F7D0ACB6-6049-4FC5-A132-2CF6041C7BBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TworcyData", "TworcyData\TworcyData.csproj", "{F7D0ACB6-6049-4FC5-A132-2CF6041C7BBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TworcyServices", "TworcyServices\TworcyServices.csproj", "{BAE7607D-2965-4D31-9927-762CDF47E66B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F7D0ACB6-6049-4FC5-A132-2CF6041C7BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7D0ACB6-6049-4FC5-A132-2CF6041C7BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7D0ACB6-6049-4FC5-A132-2CF6041C7BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE7607D-2965-4D31-9927-762CDF47E66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE7607D-2965-4D31-9927-762CDF47E66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE7607D-2965-4D31-9927-762CDF47E66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE7607D-2965-4D31-9927-762CDF47E66B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

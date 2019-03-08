@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TworcyData;
+using TworcyServices;
 
 namespace Tworcy
 {
@@ -38,7 +39,8 @@ namespace Tworcy
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            services.AddSingleton(Configuration);
+            services.AddScoped<ITworcyAsset, TworcaAssetService>();
             services.AddDbContext<TworcyContext>(
                     options => { options.UseSqlite($"Data Source={_appHost.ContentRootPath}/Tworcy.db"); });
         }
