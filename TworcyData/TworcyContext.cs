@@ -7,7 +7,7 @@ namespace TworcyData
     {
         public TworcyContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Tworca> Tworcy { get; set; }    
-        
+        public DbSet<Tworca> Tworcy { get; set; }
+        public DbSet<Zdjecie> Zdjecia { get; set; }
     }
 }
