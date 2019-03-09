@@ -43,6 +43,7 @@ namespace Tworcy
             services.AddScoped<ITworcyAsset, TworcaAssetService>();
             services.AddDbContext<TworcyContext>(
                     options => { options.UseSqlite($"Data Source={_appHost.ContentRootPath}/Tworcy.db"); });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

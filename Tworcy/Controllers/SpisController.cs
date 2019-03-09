@@ -28,13 +28,7 @@ namespace Tworcy.Controllers
                     Imie = result.Imie,
                     Nazwisko = result.Nazwisko,
                     Zdjecie = result.Zdjecie,
-                    Biogram = result.Biogram,
-                    Bibliografia = result.Bibliografia,
-                    Nagrody = result.Nagrody,
-                    Wystawy = result.Wystawy,
-                    Teksty = result.Teksty,
-                    Audio = result.Audio,
-                    Kontakt = result.Kontakt
+                    Biogram = result.Biogram
                 });
 
             var model = new AssetIndexModel()
@@ -43,6 +37,16 @@ namespace Tworcy.Controllers
             };
 
             return View(model);
+        }
+
+        public IActionResult Detail(int id)
+        {
+            var tworca = _assets.GetById(id);
+            var galeria = _assets.GetTworcaGallery(tworca);
+
+
+
+            return View(galeria);
         }
     }
 }

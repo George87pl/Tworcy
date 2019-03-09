@@ -1,24 +1,17 @@
 ﻿@model Tworcy.Models.Spis.AssetIndexModel
 
-<div id="assets">
-    <h3>Katalog Twórców</h3>
-    <div id="assetsTable">
-        <table class="table table-condensed" id="catalogIndexTable">
-            <thead>
-            <tr>
-                <th>Imię</th>
-                <th>Nazwisko</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach (var asset in Model.Assets)
-            {
-                <tr class="assetRow">
-                    <td class="">@asset.Imie</td>
-                    <td class="">@asset.Nazwisko</td>
-                </tr>
-            }
-            </tbody>
-        </table>
-    </div>
+<h3>Katalog Twórców</h3>
+
+<div class="row">
+    @foreach (var asset in Model.Assets)
+    {
+        <div class="col-xs-12 col-sm-8 col-md-4 col-lg-2">
+            <div class="card">
+                <img class="card-img-top" src="@asset.Zdjecie" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@asset.Imie @asset.Nazwisko</h5>
+                </div>
+            </div>
+        </div>
+    }
 </div>
