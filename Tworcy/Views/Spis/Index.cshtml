@@ -5,12 +5,13 @@
 <div class="row">
     @foreach (var asset in Model.Assets)
     {
-        <div class="col-xs-12 col-sm-8 col-md-4 col-lg-2">
-            <div class="card">
-                <img class="card-img-top" src="@asset.Zdjecie" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">@asset.Imie @asset.Nazwisko</h5>
-                </div>
+        <div class="col-auto">
+            <div class="tworca">
+                <a asp-controller="Spis" asp-action="Detail" asp-route-id="@asset.Id" class="cardLink">
+                    <img class="img-thumbnail" src="@asset.Zdjecie" alt="Card image cap">
+                </a>
+                    <p>@asset.Imie @asset.Nazwisko</p>
+                
             </div>
         </div>
     }

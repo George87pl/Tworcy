@@ -1,0 +1,70 @@
+﻿@model Tworcy.Models.Spis.AssetDetailModel
+
+<div class="row">
+    <div class="col-12">
+        <img src="@Model.Tworca.Zdjecie" class="mx-auto mx-md-3 d-block float-md-left img-thumbnail" alt="Alternate Text" />
+        <div class="text-justify">@Html.Raw(@Model.Tworca.Biogram)</div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-12">
+        <div class="btn-group">
+            @if (@Model.Tworca.Bibliografia != null)
+            {
+                <button type="button" class="btn btn-primary" data-toggle="collapse" href="#bibliografia" role="button" aria-expanded="false" aria-controls="collapseExample">Bibliografia</button>
+            }
+            @if (@Model.Tworca.Wystawy != null)
+            {
+                <button type="button" class="btn btn-primary">Wystawy</button>
+            }
+            @if (@Model.Tworca.Nagrody != null)
+            {
+                <button type="button" class="btn btn-primary">Nagrody</button>
+            }
+            @if (@Model.Tworca.Teksty != null)
+            {
+                <button type="button" class="btn btn-primary">Teksty</button>
+            }
+            @if (@Model.Tworca.Audio != null)
+            {
+                <button type="button" class="btn btn-primary">Audio</button>
+            }
+            @if (@Model.Tworca.Kontakt != null)
+            {
+                <button type="button" class="btn btn-primary">Kontakt</button>
+            }
+            @if (@Model.Zdjecia.Count() > 0)
+            {
+                <button type="button" class="btn btn-primary" data-toggle="collapse" href="#galeria" role="button" aria-expanded="false" aria-controls="collapseExample">Galeria</button>
+            }
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-12">
+        <div class="collapse" id="galeria">
+            <div class="row">
+                @foreach (var asset in Model.Zdjecia)
+                {
+                    <div class="col-auto">
+                        <div class="tworca">
+                            <img class="img-thumbnail" data-toggle="modal" data-target="#zdjecie@asset.Id" src="@asset.zdjecieUrl" alt="@asset.zdjecieUrl">
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="collapse" id="bibliografia">
+            @Model.Tworca.Bibliografia
+        </div>
+
+    </div>
+</div>
+

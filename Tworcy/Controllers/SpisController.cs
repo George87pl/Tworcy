@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Tworcy.Models.Spis;
 using TworcyData;
 
@@ -44,9 +41,13 @@ namespace Tworcy.Controllers
             var tworca = _assets.GetById(id);
             var galeria = _assets.GetTworcaGallery(tworca);
 
+            var model = new AssetDetailModel
+            {
+                Tworca = tworca,
+                Zdjecia = galeria
+            };
 
-
-            return View(galeria);
+            return View(model);
         }
     }
 }
